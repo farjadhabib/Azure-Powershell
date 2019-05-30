@@ -30,4 +30,4 @@ function New-AzureSlot {
 } 
 
 #example command to execute function
-Create-AzureSlot -ResourceGroup "<MyResourceGroup>" -WebappName "<MyAppServiceName>" -SlotName "<MySlotName>" -Verbose
+New-AzureSlot -ResourceGroup "<MyResourceGroup>" -WebappName "<MyAppServiceName>" -SlotName "<MySlotName>" -Verbose
