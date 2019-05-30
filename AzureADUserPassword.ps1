@@ -2,13 +2,13 @@
 Connect-MSOLservice
 
 #get Azure AD user by user id
-Get-MSOLUser -UserPrincipalName <user ID> | Select PasswordNeverExpires
+Get-MSOLUser -UserPrincipalName "<user ID>" | Select-Object PasswordNeverExpires
 
 #displaying selective user properties
-Get-MSOLUser | Select UserPrincipalName, PasswordNeverExpires
+Get-MSOLUser | Select-Object UserPrincipalName, PasswordNeverExpires
 
 #set user properties
-Set-MsolUser -UserPrincipalName <user ID> -PasswordNeverExpires \$false
+Set-MsolUser -UserPrincipalName "<user ID>" -PasswordNeverExpires \$false
 
 #get user and then set user properties in bulk
 Get-MSOLUser | Set-MsolUser -PasswordNeverExpires \$false
