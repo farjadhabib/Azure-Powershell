@@ -31,4 +31,7 @@ function Switch-AzureAppServiceSlot {
         Write-Error -Message "$SlotName does not exist"
     }
     
-} Swap-AzureSlot -ResourceGroup "<MyResourceGroup>" -WebappName "<MyAppServiceName>" -SlotName "<MySlotName>" -From "<from slot>" -To "<to slot>" -Verbose
+} 
+
+#example function call
+Switch-AzureAppServiceSlot -ResourceGroup "<MyResourceGroup>" -WebappName "<MyAppServiceName>" -SlotName "<MySlotName>" -From "<from slot>" -To "<to slot>" -Verbose
